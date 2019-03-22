@@ -8,8 +8,6 @@ var Spotify = require('node-spotify-api');
  
 var spotify = new Spotify(keys.spotify);
 
-// var spotify = new Spotify(keys.spotify);
-
 var axios = require("axios");
 
 var command = process.argv[2];
@@ -24,7 +22,7 @@ for (var i = 4; i < processArgv.length; i++) {
 
 
 
-console.log(unique);
+// console.log(unique);
 
 basic();
 
@@ -50,7 +48,7 @@ function basic() {
 }
 
 function concertThis() {
-  console.log(unique);
+  // console.log(unique);
   var queryURL = "https://rest.bandsintown.com/artists/" + unique + "/events?app_id=codingbootcamp";
 
   axios.get(queryURL).then(
@@ -68,21 +66,21 @@ function concertThis() {
 }
 
 function spotifyFunction() {
- console.log(unique);
+//  console.log(unique);
 
-    if (unique === undefined) {
-      unique = "The+Sign+Ace+of+Base";
+  if (unique === undefined) {
+    unique = "The+Sign+Ace+of+Base";
   }
 
-    spotify.search({ type: 'track', query: unique, limit: 1})
-    .then(function(response) {
+  spotify.search({ type: 'track', query: unique, limit: 1})
+  .then(function(response) {
 
-        console.log("Artists: " + response.tracks.items[0].album.artists[0].name);
-        console.log("Song Name: " + response.tracks.items[0].name);
-        console.log("Song Preview: " + response.tracks.items[0].preview_url);
-        console.log("Album Name: " + response.tracks.items[0].album.name);
-    });
-  
+      console.log("Artists: " + response.tracks.items[0].album.artists[0].name);
+      console.log("Song Name: " + response.tracks.items[0].name);
+      console.log("Song Preview: " + response.tracks.items[0].preview_url);
+      console.log("Album Name: " + response.tracks.items[0].album.name);
+  });
+
 }
 
 function movieThis() {
@@ -129,12 +127,14 @@ fs.readFile("random.txt", "utf8", function(error, data) {
   for (var j = 1; j < dataArrInput.length; j++) {
     unique += ("+" + dataArrInput[j]); 
   }
-
+  
+  //gets rid of the double quotation marks
+  unique = unique.replace(/["]/g, '');
 
   command = dataArr[0];
 
-  console.log(command);
-  console.log(unique);
+  // console.log(command);
+  // console.log(unique);
   basic();
 
   });
