@@ -14,6 +14,8 @@ var command = process.argv[2];
 var processArgv = process.argv;
 var unique = "";
 
+var separator = "-------------------------------------------";
+
 unique = processArgv[3];
 
 for (var i = 4; i < processArgv.length; i++) {
@@ -55,10 +57,27 @@ function concertThis() {
     function(response) {
       // console.log(response);
       for (i = 0; i < response.data.length; i++) {
-        console.log("Venue Name: " + response.data[i].venue.name);
-        console.log("Venue Location: " + response.data[i].venue.city);
-        console.log("Date of event: " + moment(response.data[i].datetime).format("L"));
-        console.log("-------------------------------------------");
+        var venueName = ("Venue Name: " + response.data[i].venue.name);
+        var venueLocation = ("Venue Location: " + response.data[i].venue.city);
+        var dateEvent = ("Date of event: " + moment(response.data[i].datetime).format("L"));
+        
+
+        fs.appendFile("log.txt", venueName + "\n" + venueLocation + "\n" + dateEvent + "\n" + " " + "\n", function(error) {
+
+          // If an error was experienced it will be logged.
+          if (error) {
+            console.log(error);
+          }
+        
+          // If no error is experienced, the information is logged to the node console.
+          else {
+            console.log(venueName);
+            console.log(venueLocation);
+            console.log(dateEvent);
+            console.log(" ");
+          }
+        
+        });
 
       }
     }
@@ -75,10 +94,30 @@ function spotifyFunction() {
   spotify.search({ type: 'track', query: unique, limit: 1})
   .then(function(response) {
 
-      console.log("Artists: " + response.tracks.items[0].album.artists[0].name);
-      console.log("Song Name: " + response.tracks.items[0].name);
-      console.log("Song Preview: " + response.tracks.items[0].preview_url);
-      console.log("Album Name: " + response.tracks.items[0].album.name);
+      var artists = ("Artists: " + response.tracks.items[0].album.artists[0].name);
+      var songName = ("Song Name: " + response.tracks.items[0].name);
+      var songPreview = ("Song Preview: " + response.tracks.items[0].preview_url);
+      var albumName = ("Album Name: " + response.tracks.items[0].album.name);
+
+
+      fs.appendFile("log.txt", artists + "\n" + songName + "\n" + songPreview + "\n" + albumName + "\n" + " " + "\n", function(error) {
+
+        // If an error was experienced it will be logged.
+        if (error) {
+          console.log(error);
+        }
+      
+        // If no error is experienced, the information is logged to the node console.
+        else {
+          console.log(artists);
+          console.log(songName);
+          console.log(songPreview);
+          console.log(albumName);
+          console.log(" ");
+        }
+      
+      });
+
   });
 
 }
@@ -93,17 +132,49 @@ function movieThis() {
   axios.get(queryUrl).then(
     function(response) {
       // console.log(response);
-      console.log("* Title: " + response.data.Title);
-      console.log("* Year: " + response.data.Year);
-      console.log("* IMDB Rating: " + response.data.imdbRating);
-      console.log("* Rotten Tomatoes Rating: " + response.data.Ratings[1].Value);
-      console.log("* Countries: " + response.data.Country);
-      console.log("* Languages: " + response.data.Language);
-      console.log("* Plot: " + response.data.Plot);
-      console.log("* Actors: " + response.data.Actors);
-    }
-  );
+      // console.log("* Title: " + response.data.Title);
+      // console.log("* Year: " + response.data.Year);
+      // console.log("* IMDB Rating: " + response.data.imdbRating);
+      // console.log("* Rotten Tomatoes Rating: " + response.data.Ratings[1].Value);
+      // console.log("* Countries: " + response.data.Country);
+      // console.log("* Languages: " + response.data.Language);
+      // console.log("* Plot: " + response.data.Plot);
+      // console.log("* Actors: " + response.data.Actors);
 
+
+      var title = ("* Title: " + response.data.Title);
+      var year = ("* Year: " + response.data.Year);
+      var imdbRatingLog = ("* IMDB Rating: " + response.data.imdbRating);
+      var rottenTomatoes = ("* Rotten Tomatoes Rating: " + response.data.Ratings[1].Value);
+      var countries = ("* Countries: " + response.data.Country);
+      var languages = ("* Languages: " + response.data.Language);
+      var plot = ("* Plot: " + response.data.Plot);
+      var actors = ("* Actors: " + response.data.Actors);
+
+
+
+      fs.appendFile("log.txt", title + "\n" + year + "\n" + imdbRatingLog + "\n" + rottenTomatoes + "\n" + countries + "\n" + languages + "\n" + plot + "\n" + actors + "\n" + " " + "\n", function(error) {
+
+        // If an error was experienced it will be logged.
+        if (error) {
+          console.log(error);
+        }
+      
+        // If no error is experienced, the information is logged to the node console.
+        else {
+          console.log(title);
+          console.log(year);
+          console.log(imdbRatingLog);
+          console.log(rottenTomatoes);
+          console.log(countries);
+          console.log(languages);
+          console.log(plot);
+          console.log(actors);
+          console.log(" ");
+        }
+      
+      });
+    });
 }
 
 
