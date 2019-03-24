@@ -58,25 +58,28 @@ function concertThis() {
       // console.log(response);
       for (i = 0; i < response.data.length; i++) {
         var venueName = ("Venue Name: " + response.data[i].venue.name);
-        var venueLocation = ("Venue Location: " + response.data[i].venue.city);
-        var dateEvent = ("Date of event: " + moment(response.data[i].datetime).format("L"));
+        var venueLocation;
+        var dateEvent = ("Date of Event: " + moment(response.data[i].datetime).format("L"));
+
+        if (response.data[i].venue.region === "") {
+          venueLocation = ("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country)
+        }
+
+        else {
+          venueLocation = ("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.region);
+        }
         
+        console.log(venueName);
+        console.log(venueLocation);
+        console.log(dateEvent);
+        console.log(" ");
 
         fs.appendFile("log.txt", venueName + "\n" + venueLocation + "\n" + dateEvent + "\n" + " " + "\n", function(error) {
 
           // If an error was experienced it will be logged.
           if (error) {
             console.log(error);
-          }
-        
-          // If no error is experienced, the information is logged to the node console.
-          else {
-            console.log(venueName);
-            console.log(venueLocation);
-            console.log(dateEvent);
-            console.log(" ");
-          }
-        
+          } 
         });
 
       }
