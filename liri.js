@@ -10,21 +10,13 @@ var spotify = new Spotify(keys.spotify);
 
 var axios = require("axios");
 
-var command = process.argv[2];
 var processArgv = process.argv;
-var unique = "";
-
-var separator = "-------------------------------------------";
-
-unique = processArgv[3];
+var command = processArgv[2];
+var unique = processArgv[3];
 
 for (var i = 4; i < processArgv.length; i++) {
   unique += ("+" + processArgv[i]); 
 }
-
-
-
-// console.log(unique);
 
 basic();
 

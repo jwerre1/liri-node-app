@@ -1,0 +1,249 @@
+Venue Name: 9:30 Club
+Venue Location: Washington, DC
+Date of Event: 04/26/2019
+ 
+Venue Name: Dogfish Head Brewery
+Venue Location: Rehoboth Beach, DE
+Date of Event: 04/27/2019
+ 
+Venue Name: The Wilbur
+Venue Location: Boston, MA
+Date of Event: 04/28/2019
+ 
+Venue Name: Brooklyn Steel
+Venue Location: Brooklyn, NY
+Date of Event: 04/30/2019
+ 
+Venue Name: White Eagle Hall
+Venue Location: Jersey City, NJ
+Date of Event: 05/01/2019
+ 
+Venue Name: L'astral
+Venue Location: Montreal, Canada
+Date of Event: 05/03/2019
+ 
+Venue Name: The Bronson Centre
+Venue Location: Ottawa, Canada
+Date of Event: 05/04/2019
+ 
+Venue Name: Phoenix Concert Theatre
+Venue Location: Toronto, Canada
+Date of Event: 05/05/2019
+ 
+Venue Name: Mr. Smalls Theatre
+Venue Location: Millvale, PA
+Date of Event: 05/07/2019
+ 
+Venue Name: Mr. Smalls Theatre
+Venue Location: Millvale, PA
+Date of Event: 05/08/2019
+ 
+Venue Name: Woodward Theater | Live Music
+Venue Location: Cincinnati, OH
+Date of Event: 05/09/2019
+ 
+Venue Name: Cannery Ballroom
+Venue Location: Nashville, TN
+Date of Event: 05/10/2019
+ 
+Venue Name: 1884 Lounge
+Venue Location: Memphis, TN
+Date of Event: 05/11/2019
+ 
+Venue Name: Buskirk-Chumley Theater
+Venue Location: Bloomington, IN
+Date of Event: 05/13/2019
+ 
+Venue Name: Majestic Theatre
+Venue Location: Madison, WI
+Date of Event: 05/14/2019
+ 
+Venue Name: Thalia Hall
+Venue Location: Chicago, IL
+Date of Event: 05/15/2019
+ 
+Venue Name: Thalia Hall
+Venue Location: Chicago, IL
+Date of Event: 05/16/2019
+ 
+Venue Name: First Avenue
+Venue Location: Minneapolis, MN
+Date of Event: 05/17/2019
+ 
+Venue Name: Ottobar
+Venue Location: Baltimore, MD
+Date of Event: 07/17/2019
+ 
+Venue Name: Ottobar
+Venue Location: Baltimore, MD
+Date of Event: 07/18/2019
+ 
+Venue Name: Union Transfer
+Venue Location: Philadelphia, PA
+Date of Event: 07/19/2019
+ 
+Venue Name: Asbury Lanes
+Venue Location: Asbury Park, NJ
+Date of Event: 07/22/2019
+ 
+Venue Name: The Jefferson Theater
+Venue Location: Charlottesville, VA
+Date of Event: 07/23/2019
+ 
+Venue Name: MRG30 (The Carolina Theatre Of Durham) 
+Venue Location: Durham, NC
+Date of Event: 07/24/2019
+ 
+Venue Name: Music in the Mill
+Venue Location: Hickory, NC
+Date of Event: 08/16/2019
+ 
+Venue Name: Metro Music Hall
+Venue Location: Salt Lake City, UT
+Date of Event: 08/28/2019
+ 
+Venue Name: Pink Garter Theatre
+Venue Location: Jackson, WY
+Date of Event: 08/29/2019
+ 
+Venue Name: The Pub Station
+Venue Location: Billings, MT
+Date of Event: 08/30/2019
+ 
+Venue Name: Top Hat Lounge
+Venue Location: Missoula, MT
+Date of Event: 08/31/2019
+ 
+Venue Name: Bing Crosby Theater
+Venue Location: Spokane, WA
+Date of Event: 09/01/2019
+ 
+Venue Name: The Showbox
+Venue Location: Seattle, WA
+Date of Event: 09/04/2019
+ 
+Venue Name: Neumos
+Venue Location: Seattle, WA
+Date of Event: 09/05/2019
+ 
+Venue Name: Commodore Ballroom
+Venue Location: Vancouver, Canada
+Date of Event: 09/06/2019
+ 
+Venue Name: McDonald Theatre
+Venue Location: Eugene, OR
+Date of Event: 09/07/2019
+ 
+Venue Name: Crystal Ballroom
+Venue Location: Portland, OR
+Date of Event: 09/09/2019
+ 
+Venue Name: Aladdin Theater
+Venue Location: Portland, OR
+Date of Event: 09/10/2019
+ 
+Venue Name: The Fillmore
+Venue Location: San Francisco, CA
+Date of Event: 09/12/2019
+ 
+Venue Name: The Fillmore
+Venue Location: San Francisco, CA
+Date of Event: 09/13/2019
+ 
+Venue Name: The Belasco Theater
+Venue Location: Los Angeles, CA
+Date of Event: 09/14/2019
+ 
+Venue Name: House of Blues
+Venue Location: Anaheim, CA
+Date of Event: 09/16/2019
+ 
+Venue Name: House of Blues
+Venue Location: San Diego, CA
+Date of Event: 09/17/2019
+ 
+Venue Name: Brooklyn Bowl
+Venue Location: Las Vegas, NV
+Date of Event: 09/18/2019
+ 
+Venue Name: Slaktkyrkan
+Venue Location: Stockholm, Sweden
+Date of Event: 11/09/2019
+ 
+Venue Name: Rockefeller
+Venue Location: Oslo, Norway
+Date of Event: 11/10/2019
+ 
+Venue Name: Pustervik
+Venue Location: Gothenburg, Sweden
+Date of Event: 11/11/2019
+ 
+Venue Name: De Helling
+Venue Location: Utrecht, Netherlands
+Date of Event: 11/14/2019
+ 
+Venue Name: O2 Shepherds Bush Empire
+Venue Location: London, United Kingdom
+Date of Event: 11/15/2019
+ 
+Venue Name: Brudenell Social Club
+Venue Location: Leeds, United Kingdom
+Date of Event: 11/16/2019
+ 
+Venue Name: Brudenell Social Club
+Venue Location: Leeds, United Kingdom
+Date of Event: 11/17/2019
+ 
+Venue Name: St Luke's
+Venue Location: Glasgow, United Kingdom
+Date of Event: 11/18/2019
+ 
+Venue Name: Button Factory
+Venue Location: Dublin, Ireland
+Date of Event: 11/20/2019
+ 
+Venue Name: Sala 0
+Venue Location: Madrid, Spain
+Date of Event: 11/22/2019
+ 
+Venue Name: Café Torgal
+Venue Location: Ourense, Spain
+Date of Event: 11/23/2019
+ 
+Venue Name: Lisboa ao Vivo
+Venue Location: Lisbon, Portugal
+Date of Event: 11/24/2019
+
+Artists: Gladys Knight & The Pips
+Song Name: Midnight Train to Georgia
+Song Preview: https://p.scdn.co/mp3-preview/d00b33563239b4ad3229f84b2856a753790bdefe?cid=606b2533648d4d97a6ec7da2d7f68331
+Album Name: Beautiful Ballads
+ 
+Artists: Ace of Base
+Song Name: The Sign
+Song Preview: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=606b2533648d4d97a6ec7da2d7f68331
+Album Name: The Sign (US Album) [Remastered]
+ 
+* Title: Finding Nemo
+* Year: 2003
+* IMDB Rating: 8.1
+* Rotten Tomatoes Rating: 99%
+* Countries: USA
+* Languages: English
+* Plot: After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.
+* Actors: Albert Brooks, Ellen DeGeneres, Alexander Gould, Willem Dafoe
+ 
+* Title: Mr. Nobody
+* Year: 2009
+* IMDB Rating: 7.8
+* Rotten Tomatoes Rating: 67%
+* Countries: Belgium, Germany, Canada, France, USA, UK
+* Languages: English, Mohawk
+* Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+* Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+ 
+Artists: Backstreet Boys
+Song Name: I Want It That Way
+Song Preview: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=606b2533648d4d97a6ec7da2d7f68331
+Album Name: The Hits--Chapter One
+ 
