@@ -11,14 +11,17 @@ var spotify = new Spotify(keys.spotify);
 var axios = require("axios");
 
 var processArgv = process.argv;
-var command = processArgv[2];
-var unique = processArgv[3];
 
+// The command as to which information to show.
+var command = processArgv[2];
+
+// Creates input for user's artist, song, or movie input.
+var unique = processArgv[3];
 for (var i = 4; i < processArgv.length; i++) {
   unique += ("+" + processArgv[i]); 
 }
 
-basic();
+
 
 function basic() {
   
@@ -41,31 +44,35 @@ function basic() {
   }
 }
 
+// Generates concert-this response.
 function concertThis() {
-  // console.log(unique);
   var queryURL = "https://rest.bandsintown.com/artists/" + unique + "/events?app_id=codingbootcamp";
 
   axios.get(queryURL).then(
     function(response) {
-      // console.log(response);
       for (i = 0; i < response.data.length; i++) {
         var venueName = ("Venue Name: " + response.data[i].venue.name);
         var venueLocation;
+        // Moment used to correctly format date. 
         var dateEvent = ("Date of Event: " + moment(response.data[i].datetime).format("L"));
 
+        // If venue location is outside the USA, it will show as "City, Country".
         if (response.data[i].venue.region === "") {
           venueLocation = ("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country)
         }
 
+        // Otherwise, it will be "City, State".
         else {
           venueLocation = ("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.region);
         }
         
+        // Display Information
         console.log(venueName);
         console.log(venueLocation);
         console.log(dateEvent);
         console.log(" ");
 
+        // Append to 'log.txt'.
         fs.appendFile("log.txt", venueName + "\n" + venueLocation + "\n" + dateEvent + "\n" + " " + "\n", function(error) {
 
           // If an error was experienced it will be logged.
@@ -73,51 +80,51 @@ function concertThis() {
             console.log(error);
           } 
         });
-
       }
     }
   );
 }
 
+// Generates spotify-this-song response.
 function spotifyFunction() {
-//  console.log(unique);
 
+  // If user does not specify song, it will return information on "The Sign" by Ace of Base.
   if (unique === undefined) {
     unique = "The+Sign+Ace+of+Base";
   }
 
+  // Returns information on only one song.
   spotify.search({ type: 'track', query: unique, limit: 1})
   .then(function(response) {
 
-      var artists = ("Artists: " + response.tracks.items[0].album.artists[0].name);
-      var songName = ("Song Name: " + response.tracks.items[0].name);
-      var songPreview = ("Song Preview: " + response.tracks.items[0].preview_url);
-      var albumName = ("Album Name: " + response.tracks.items[0].album.name);
+    var artists = ("Artists: " + response.tracks.items[0].album.artists[0].name);
+    var songName = ("Song Name: " + response.tracks.items[0].name);
+    var songPreview = ("Song Preview: " + response.tracks.items[0].preview_url);
+    var albumName = ("Album Name: " + response.tracks.items[0].album.name);
 
+    // Append to 'log.txt'.
+    fs.appendFile("log.txt", artists + "\n" + songName + "\n" + songPreview + "\n" + albumName + "\n" + " " + "\n", function(error) {
 
-      fs.appendFile("log.txt", artists + "\n" + songName + "\n" + songPreview + "\n" + albumName + "\n" + " " + "\n", function(error) {
-
-        // If an error was experienced it will be logged.
-        if (error) {
-          console.log(error);
-        }
-      
-        // If no error is experienced, the information is logged to the node console.
-        else {
-          console.log(artists);
-          console.log(songName);
-          console.log(songPreview);
-          console.log(albumName);
-          console.log(" ");
-        }
-      
-      });
-
+      // If an error was experienced it will be logged.
+      if (error) {
+        console.log(error);
+      }
+    
+      // If no error is experienced, the information is logged to the node console.
+      else {
+        console.log(artists);
+        console.log(songName);
+        console.log(songPreview);
+        console.log(albumName);
+        console.log(" ");
+      }
+    });
   });
-
 }
 
+// Generates movie-this response.
 function movieThis() {
+  // If movie is not specified, will return infomation on "Mr. Nobody."
   if (unique === undefined) {
     unique = "Mr.+Nobody";
   }
@@ -126,17 +133,6 @@ function movieThis() {
 
   axios.get(queryUrl).then(
     function(response) {
-      // console.log(response);
-      // console.log("* Title: " + response.data.Title);
-      // console.log("* Year: " + response.data.Year);
-      // console.log("* IMDB Rating: " + response.data.imdbRating);
-      // console.log("* Rotten Tomatoes Rating: " + response.data.Ratings[1].Value);
-      // console.log("* Countries: " + response.data.Country);
-      // console.log("* Languages: " + response.data.Language);
-      // console.log("* Plot: " + response.data.Plot);
-      // console.log("* Actors: " + response.data.Actors);
-
-
       var title = ("* Title: " + response.data.Title);
       var year = ("* Year: " + response.data.Year);
       var imdbRatingLog = ("* IMDB Rating: " + response.data.imdbRating);
@@ -146,8 +142,7 @@ function movieThis() {
       var plot = ("* Plot: " + response.data.Plot);
       var actors = ("* Actors: " + response.data.Actors);
 
-
-
+      // Append to 'log.txt'.
       fs.appendFile("log.txt", title + "\n" + year + "\n" + imdbRatingLog + "\n" + rottenTomatoes + "\n" + countries + "\n" + languages + "\n" + plot + "\n" + actors + "\n" + " " + "\n", function(error) {
 
         // If an error was experienced it will be logged.
@@ -167,12 +162,12 @@ function movieThis() {
           console.log(actors);
           console.log(" ");
         }
-      
       });
-    });
+    }
+  );
 }
 
-
+// Generates do-what-it-says response.
 function checkRandom() {
 fs.readFile("random.txt", "utf8", function(error, data) {
 
@@ -187,21 +182,23 @@ fs.readFile("random.txt", "utf8", function(error, data) {
 
   var dataArrInput = dataArr[1].split(" ")
 
-
+  // Assigns 'unique'.
   unique = dataArrInput[0];
-
   for (var j = 1; j < dataArrInput.length; j++) {
     unique += ("+" + dataArrInput[j]); 
   }
   
-  //gets rid of the double quotation marks
+  // Gets rid of the double quotation marks
   unique = unique.replace(/["]/g, '');
 
+  // Assigns 'command'.
   command = dataArr[0];
-
-  // console.log(command);
-  // console.log(unique);
+  
+  // Run program with new 'command' and 'unique'.
   basic();
 
   });
 }
+
+// Run the app.
+basic();
